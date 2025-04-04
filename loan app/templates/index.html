@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">     
+    <title> Prediction </title> 
+</head>
+    
+<body>    
+    <br>
+    <h1> <b> KNOW IT !!! </b> </h1>    
+    <h2> <b>Select the content for prediction to continue...</b> </h2>
+    <br>
+    <br>
+    <div class="dropdown">    
+        
+        <button class="dropbtn"> Go & Try &raquo; </button>  
+        
+        <div class="dropdown-content" style="left:0;">
+            <a href="{{ url_for('loan')}}"> Loan Eligibility prediction </a>
+        </div>        
+    </div>    
+</body>
+</html>

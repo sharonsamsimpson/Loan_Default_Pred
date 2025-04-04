@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/loan.css') }}">  
+    <title> Prediction </title>  
+</head>
+
+<body>
+    <h1><b> Know It !!! </b></h1>
+    
+    <div class="login">
+        
+        <h5><b>Loan Eligibility prediction</b></h5>
+        
+        <form action="{{ url_for('rloan')}}" method="POST" class="scroll">
+            
+            
+            <legend>Income</legend>
+            <input type="number" name="Income" placeholder="enter your annual income" required="required"/>
+       
+            <legend>Age</legend>
+            <input type="number" name="Age" placeholder="enter your age" required="required"/>
+        
+            <legend>Experience</legend>
+            <input type="number" name="Experience" placeholder="enter it in years" required="required"/>
+
+            <legend>Married?</legend>
+            <input type="number" name="Married" placeholder="enter 0 if no or 1 in yes" required="required"/>
+        
+            <legend>Your Car Ownership?</legend>
+            <input type="number" name="Car" placeholder="enter 0 if no or 1 in yes" required="required"/>
+           
+            <legend>What's your Profession?</legend>
+            <input type="number" name="Profession" placeholder="enter 0 if no or 1 in yes" required="required"/>
+      
+            <legend>Stay in your current house?</legend>
+            <input type="number" name="House" placeholder="enter it in years" required="required"/>
+  
+            <legend>House_Ownership_norent_noown?</legend>
+            <input type="number" name="House_Ownership_norent_noown" placeholder="enter 0 if no or 1 in yes" required="required"/>
+            
+            <legend>House_Ownership_owned?</legend>
+            <input type="number" name="House_Ownership_owned" placeholder="enter 0 if no or 1 in yes" required="required"/>
+            
+            <legend>House_Ownership_rented?</legend>
+            <input type="number" name="House_Ownership_rented" placeholder="enter 0 if no or 1 in yes" required="required"/>
+            
+            <br>
+            
+            <button type="submit" class="btn btn-primary btn-block btn-large"> Predict </button>
+        </form>
+        <br>
+        
+        {{ prediction_text }}
+        <br>
+        
+        <form action="{{ url_for('back')}}" method="POST">
+            <button  type="submit" class="btn btn-primary">Back</button>
+        </form>
+        <br>
+        
+    </div>
+</body>
+</html>
